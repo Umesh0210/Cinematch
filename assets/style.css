@@ -1,0 +1,1397 @@
+/* Cute Cyber-Kawaii Dark Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Quicksand:wght@500;700&display=swap');
+
+/* Main background: Deep Indigo-Violet Gradient */
+.stApp {
+    background: linear-gradient(135deg, #130f40 0%, #1e1548 40%, #2a1b54 100%);
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+/* Header & Title Banner Card */
+h1,
+h2,
+h3 {
+    font-family: 'Comfortaa', 'Montserrat', sans-serif !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 255, 0.9));
+    color: #0f172a !important;
+    text-align: center;
+    font-weight: 800 !important;
+    font-size: 2.3rem !important;
+    padding: 16px 36px !important;
+    border-radius: 50px !important;
+    width: fit-content !important;
+    margin: 10px auto 30px auto !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(85, 239, 196, 0.4) !important;
+    border: 3px solid #55efc4 !important;
+    letter-spacing: 1px;
+}
+
+/* Normal Labels & Text */
+p,
+label,
+.stMarkdown {
+    color: #e0d7ff !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+}
+
+/* Keyframe Animations for Aurora Glow, Light Reflection Sheen & Dynamic Gradient */
+@keyframes auroraGlow {
+    0% {
+        background-position: 0% 50%;
+        filter: blur(14px) opacity(0.7);
+    }
+    50% {
+        background-position: 100% 50%;
+        filter: blur(20px) opacity(0.95);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: blur(14px) opacity(0.7);
+    }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes lightSheen {
+    0% {
+        transform: translateX(-150%) rotate(25deg);
+    }
+    100% {
+        transform: translateX(250%) rotate(25deg);
+    }
+}
+
+/* Container for relative positioning of Aurora Glow pseudo elements */
+.stButton {
+    display: flex !important;
+    justify-content: center !important;
+    position: relative !important;
+    margin: 24px auto !important;
+}
+
+/* Premium FinTech Button Inspired by Linear, Stripe & Apple */
+.stButton>button {
+    position: relative !important;
+    z-index: 2 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 16px 42px !important;
+    font-family: 'Comfortaa', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.15rem !important;
+    letter-spacing: 0.8px !important;
+    color: #ffffff !important;
+    
+    /* Multilayered Gradient & Glassmorphism */
+    background: linear-gradient(135deg, #9333EA 0%, #06B6D4 50%, #9333EA 100%) !important;
+    background-size: 300% 300% !important;
+    animation: gradientShift 8s ease infinite !important;
+    
+    /* Border & Glass Aesthetics */
+    border-radius: 9999px !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    
+    /* Hardware Acceleration & Smooth Easing */
+    transform: translateZ(0) !important;
+    will-change: transform, box-shadow, background-position !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    
+    /* Multi-layered Soft Shadows */
+    box-shadow: 
+        0 4px 12px rgba(147, 51, 234, 0.35),
+        0 12px 28px rgba(6, 182, 212, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2) !important;
+    
+    overflow: hidden !important;
+    cursor: pointer !important;
+}
+
+/* Moving Light Reflection Sheen */
+.stButton>button::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -50% !important;
+    left: -50% !important;
+    width: 200% !important;
+    height: 200% !important;
+    background: linear-gradient(
+        60deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.35) 50%,
+        transparent 70%
+    ) !important;
+    transform: translateX(-150%) rotate(25deg) !important;
+    animation: lightSheen 6s infinite cubic-bezier(0.4, 0, 0.2, 1) !important;
+    pointer-events: none !important;
+    z-index: 3 !important;
+}
+
+/* Aurora Glow Background Layer */
+.stButton::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 2px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 92% !important;
+    height: 90% !important;
+    background: linear-gradient(135deg, #9333EA, #06B6D4, #9333EA) !important;
+    background-size: 300% 300% !important;
+    animation: auroraGlow 6s ease infinite !important;
+    border-radius: 9999px !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Floating Hover State with Dynamic Aurora Glow Expansion */
+.stButton>button:hover {
+    transform: translateY(-4px) scale(1.025) translateZ(0) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 
+        0 8px 24px rgba(147, 51, 234, 0.5),
+        0 20px 40px rgba(6, 182, 212, 0.35),
+        0 0 25px rgba(6, 182, 212, 0.4),
+        inset 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+}
+
+.stButton:hover::before {
+    width: 104% !important;
+    height: 110% !important;
+    filter: blur(24px) opacity(1) !important;
+}
+
+/* Tactile Press Micro-Interaction Animation */
+.stButton>button:active {
+    transform: translateY(1px) scale(0.975) translateZ(0) !important;
+    box-shadow: 
+        0 2px 8px rgba(147, 51, 234, 0.4),
+        0 6px 16px rgba(6, 182, 212, 0.3),
+        inset 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.1s ease !important;
+}
+
+/* Outer Aurora Glow for Search Bar */
+div[data-testid="stSelectbox"] {
+    position: relative !important;
+    margin-bottom: 24px !important;
+}
+
+div[data-testid="stSelectbox"]::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 36px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 96% !important;
+    height: 48px !important;
+    background: linear-gradient(135deg, #9333EA, #06B6D4, #9333EA) !important;
+    background-size: 300% 300% !important;
+    animation: auroraGlow 6s ease infinite !important;
+    border-radius: 9999px !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+div[data-testid="stSelectbox"]:hover::before {
+    width: 102% !important;
+    height: 52px !important;
+    filter: blur(24px) opacity(1) !important;
+}
+
+/* Main Select Control Box: Identical Animated Gradient & Glassmorphism as Button */
+div[data-baseweb="select"] > div {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 10px 24px !important;
+    font-family: 'Comfortaa', 'Inter', -apple-system, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    color: #ffffff !important;
+    
+    /* Multilayered Moving Gradient */
+    background: linear-gradient(135deg, #9333EA 0%, #06B6D4 50%, #9333EA 100%) !important;
+    background-size: 300% 300% !important;
+    animation: gradientShift 8s ease infinite !important;
+    
+    /* Glassmorphism & Borders */
+    border-radius: 9999px !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    
+    /* Hardware Acceleration */
+    transform: translateZ(0) !important;
+    will-change: transform, box-shadow, background-position !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    
+    box-shadow: 
+        0 4px 12px rgba(147, 51, 234, 0.35),
+        0 12px 28px rgba(6, 182, 212, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2) !important;
+    
+    overflow: hidden !important;
+    cursor: pointer !important;
+}
+
+/* Moving Light Reflection Sheen for Search Bar */
+div[data-baseweb="select"] > div::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -50% !important;
+    left: -50% !important;
+    width: 200% !important;
+    height: 200% !important;
+    background: linear-gradient(
+        60deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.35) 50%,
+        transparent 70%
+    ) !important;
+    transform: translateX(-150%) rotate(25deg) !important;
+    animation: lightSheen 6s infinite cubic-bezier(0.4, 0, 0.2, 1) !important;
+    pointer-events: none !important;
+    z-index: 3 !important;
+}
+
+/* Floating Hover State for Search Bar */
+div[data-baseweb="select"]:hover > div {
+    transform: translateY(-3px) scale(1.01) translateZ(0) !important;
+    border-color: rgba(255, 255, 255, 0.65) !important;
+    box-shadow: 
+        0 8px 24px rgba(147, 51, 234, 0.5),
+        0 20px 40px rgba(6, 182, 212, 0.35),
+        0 0 25px rgba(6, 182, 212, 0.4),
+        inset 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Text and Input Styling inside Select Box */
+div[data-baseweb="select"] span,
+div[data-baseweb="select"] input {
+    color: #ffffff !important;
+    font-family: 'Comfortaa', 'Quicksand', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* SVG Arrow Icon inside Select Box */
+div[data-baseweb="select"] svg {
+    fill: #ffffff !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Dropdown Menu Popup List */
+ul[data-baseweb="menu"] {
+    background: rgba(19, 15, 64, 0.95) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    border-radius: 20px !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(124, 58, 237, 0.4) !important;
+    padding: 10px !important;
+}
+
+li[data-baseweb="option"] {
+    border-radius: 12px !important;
+    transition: all 0.2s ease !important;
+    font-family: 'Comfortaa', 'Quicksand', sans-serif !important;
+    color: #e0d7ff !important;
+    padding: 10px 16px !important;
+}
+
+li[data-baseweb="option"]:hover,
+li[aria-selected="true"] {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+    color: #ffffff !important;
+    transform: translateX(6px) !important;
+}
+
+/* Movie Title Cards */
+div[data-testid="stText"] {
+    font-family: 'Comfortaa', sans-serif !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    background: rgba(42, 27, 84, 0.85);
+    padding: 8px 12px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 118, 117, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* Card Framing & Hover for Movie Posters */
+div[data-testid="stImage"] img {
+    border-radius: 18px !important;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+    border: 3px solid #3c2a78 !important;
+}
+
+div[data-testid="stImage"] img:hover {
+    transform: scale(1.06) translateY(-6px) !important;
+    box-shadow: 0 16px 30px rgba(0, 206, 201, 0.35) !important;
+    border-color: #55efc4 !important;
+}
+
+/* ==========================================================================
+   PREMIUM DRIBBBLE & LINEAR FLOATING GLASSMORPHISM SIDEBAR STYLES
+   ========================================================================== */
+
+/* Main Sidebar Floating Shell with Glassmorphism, Rounded 24px Corners & Soft Glow */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, rgba(17, 14, 38, 0.88) 0%, rgba(10, 8, 26, 0.94) 100%) !important;
+    backdrop-filter: blur(24px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(139, 92, 246, 0.15) !important;
+    margin: 16px 0 16px 16px !important;
+    height: calc(100vh - 32px) !important;
+    top: 16px !important;
+    left: 16px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    z-index: 100 !important;
+}
+
+section[data-testid="stSidebar"] > div {
+    background: transparent !important;
+    padding-top: 0.5rem !important;
+}
+
+/* Floating Sidebar Custom Scrollbar */
+section[data-testid="stSidebar"] ::-webkit-scrollbar {
+    width: 4px !important;
+}
+section[data-testid="stSidebar"] ::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+section[data-testid="stSidebar"] ::-webkit-scrollbar-thumb {
+    background: rgba(147, 51, 234, 0.3) !important;
+    border-radius: 10px !important;
+}
+section[data-testid="stSidebar"] ::-webkit-scrollbar-thumb:hover {
+    background: rgba(147, 51, 234, 0.6) !important;
+}
+
+/* Sidebar Header Brand Card */
+.sidebar-brand-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    margin: 8px 8px 16px 8px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.18) 0%, rgba(59, 130, 246, 0.12) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.sidebar-brand-card:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+.brand-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    font-size: 1.3rem;
+}
+
+.brand-text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    font-size: 0.7rem;
+    color: #a78bfa;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.notification-badge {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.notification-badge:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.08);
+}
+
+.notification-dot {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    background: #ec4899;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #ec4899;
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(236, 72, 153, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0); }
+}
+
+/* Sidebar Section Headers */
+.sidebar-section-header {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #64748b;
+    font-weight: 700;
+    margin: 18px 12px 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-section-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Navigation Items Styling */
+.nav-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0 4px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 14px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.nav-item-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-item svg {
+    width: 18px;
+    height: 18px;
+    stroke: #94a3b8;
+    fill: none;
+    stroke-width: 2;
+    transition: all 0.25s ease;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateX(4px);
+}
+
+.nav-item:hover svg {
+    stroke: #a78bfa;
+    transform: scale(1.1);
+}
+
+/* Glowing Active Menu Highlight (Linear & Stripe Inspired) */
+.nav-item.active {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.9) 0%, rgba(59, 130, 246, 0.9) 100%) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.nav-item.active svg {
+    stroke: #ffffff !important;
+}
+
+.nav-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 99px;
+    backdrop-filter: blur(4px);
+}
+
+/* Sidebar Sliders & Controls Styling */
+section[data-testid="stSidebar"] div[data-testid="stSlider"] {
+    padding: 8px 12px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    margin: 6px 4px !important;
+}
+
+section[data-testid="stSidebar"] div[data-baseweb="slider"] div {
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6) !important;
+}
+
+/* Premium Profile Card at Bottom */
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    margin: 16px 4px 8px 4px;
+    background: linear-gradient(135deg, rgba(30, 27, 75, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    backdrop-filter: blur(14px);
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-img-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #a855f7, #6366f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(168, 85, 247, 0.4);
+    position: relative;
+}
+
+.online-status {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 9px;
+    height: 9px;
+    background: #10b981;
+    border: 2px solid #0f172a;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.user-plan {
+    font-size: 0.68rem;
+    color: #38bdf8;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.profile-action-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profile-action-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.4);
+}
+
+.profile-action-btn svg {
+    width: 15px;
+    height: 15px;
+    stroke: #94a3b8;
+}
+
+.profile-action-btn:hover svg {
+    stroke: #f87171;
+}
+
+/* Streamlit Sidebar Collapse Button Styling */
+button[data-testid="stSidebarCollapseButton"] {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(10px) !important;
+    transition: all 0.25s ease !important;
+    margin: 8px !important;
+}
+
+button[data-testid="stSidebarCollapseButton"]:hover {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6) !important;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Adjust Main Content Area to compliment Floating Sidebar */
+div[data-testid="stAppViewBlockContainer"] {
+    padding-top: 2rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* ==========================================================================
+   ADVANCED SEARCH & DISCOVERY COMPONENT STYLES
+   ========================================================================== */
+
+.search-section-container {
+    background: rgba(20, 16, 45, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    padding: 24px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    margin-bottom: 24px;
+}
+
+.search-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #a78bfa;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Trending & Recent Search Pill Buttons */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+.trending-badge-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+/* Compact Favorite and Suggestion Buttons inside Columns */
+div[data-testid="stColumn"] .stButton {
+    margin: 4px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+div[data-testid="stColumn"] .stButton>button {
+    padding: 6px 14px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    border-radius: 99px !important;
+    letter-spacing: 0.3px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    min-height: auto !important;
+}
+
+/* Sidebar Login Form Styling */
+section[data-testid="stSidebar"] form {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 18px !important;
+    padding: 12px !important;
+}
+
+section[data-testid="stSidebar"] form input {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    font-size: 0.85rem !important;
+}
+
+/* ==========================================================================
+   FULL PAGE LOGIN & AUTHENTICATION SCREEN STYLES
+   ========================================================================== */
+
+.login-hero-container {
+    max-width: 520px;
+    margin: 30px auto 10px auto;
+    text-align: center;
+}
+
+.login-brand-logo {
+    font-size: 3.5rem;
+    margin-bottom: 6px;
+    filter: drop-shadow(0 0 25px rgba(139, 92, 246, 0.6));
+}
+
+.login-brand-title {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+.login-brand-subtitle {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.login-card-wrapper {
+    background: linear-gradient(180deg, rgba(26, 20, 56, 0.88) 0%, rgba(15, 12, 38, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 28px;
+    padding: 32px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(139, 92, 246, 0.2);
+    margin: 0 auto 24px auto;
+    max-width: 480px;
+}
+
+.login-features-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.login-feature-tag {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #e0d7ff;
+    backdrop-filter: blur(10px);
+}
+
+/* ==========================================================================
+   SPOTIFY, LINEAR & PHONEPE INSPIRED PREMIUM INTERACTIVE SLIDER STYLES
+   ========================================================================== */
+
+.pref-slider-card {
+    background: linear-gradient(135deg, rgba(30, 24, 68, 0.75) 0%, rgba(17, 14, 45, 0.88) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 16px 18px 12px 18px;
+    margin: 8px 4px 16px 4px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.18);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pref-slider-card:hover {
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 14px 35px rgba(139, 92, 246, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.pref-slider-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.pref-slider-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pref-slider-icon {
+    font-size: 1.4rem;
+    filter: drop-shadow(0 2px 8px rgba(168, 85, 247, 0.5));
+}
+
+.pref-slider-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color: #a78bfa;
+    font-weight: 800;
+}
+
+.pref-slider-subtitle {
+    font-size: 0.88rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.pref-slider-badge {
+    background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);
+    color: #ffffff;
+    padding: 5px 14px;
+    border-radius: 99px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    font-family: 'Comfortaa', sans-serif;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    animation: pulseBadge 3s infinite ease-in-out;
+}
+
+@keyframes pulseBadge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
+
+/* Override Streamlit Slider Container inside Sidebar */
+section[data-testid="stSidebar"] div[data-testid="stSlider"] {
+    padding: 4px 0 0 0 !important;
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/* Slider Track Base */
+section[data-testid="stSidebar"] div[data-baseweb="slider"] > div {
+    background: rgba(255, 255, 255, 0.12) !important;
+    height: 8px !important;
+    border-radius: 99px !important;
+}
+
+/* Glowing Active Track Fill */
+section[data-testid="stSidebar"] div[data-baseweb="slider"] div[style*="background"] {
+    background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 50%, #06b6d4 100%) !important;
+    height: 8px !important;
+    border-radius: 99px !important;
+    box-shadow: 0 0 14px rgba(139, 92, 246, 0.7) !important;
+}
+
+/* Spotify/PhonePe Style Metallic Glowing Thumb */
+section[data-testid="stSidebar"] div[role="slider"] {
+    width: 22px !important;
+    height: 22px !important;
+    background: #ffffff !important;
+    border: 3.5px solid #8b5cf6 !important;
+    box-shadow: 0 0 16px rgba(139, 92, 246, 0.8), 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
+    border-radius: 50% !important;
+    cursor: grab !important;
+}
+
+section[data-testid="stSidebar"] div[role="slider"]:hover,
+section[data-testid="stSidebar"] div[role="slider"]:active {
+    transform: scale(1.3) !important;
+    border-color: #06b6d4 !important;
+    box-shadow: 0 0 24px rgba(6, 182, 212, 0.95), 0 6px 16px rgba(0, 0, 0, 0.6) !important;
+    cursor: grabbing !important;
+}
+
+/* Value ticks / text labels below slider */
+section[data-testid="stSidebar"] div[data-testid="stSlider"] div[data-testid="stMarkdownContainer"] p {
+    font-size: 0.75rem !important;
+    color: #94a3b8 !important;
+    font-weight: 600 !important;
+}
+
+/* ==========================================================================
+   AI RECOMMENDATION EXPLANATION CARD STYLES
+   ========================================================================== */
+
+.ai-explanation-card {
+    background: linear-gradient(135deg, rgba(30, 24, 68, 0.75) 0%, rgba(15, 12, 38, 0.9) 100%);
+    border: 1px solid rgba(147, 51, 234, 0.35);
+    border-radius: 16px;
+    padding: 12px 14px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.ai-explanation-card:hover {
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 8px 22px rgba(139, 92, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+.ai-explanation-header {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: #a78bfa;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.ai-explanation-because {
+    font-size: 0.82rem;
+    color: #e0d7ff;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.ai-movie-highlight {
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.ai-score-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ai-score-label {
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+.ai-score-val {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: #06b6d4;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.ai-genres-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #94a3b8;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.ai-genres-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.ai-genre-badge {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.35) 0%, rgba(59, 130, 246, 0.35) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.45);
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(4px);
+}
+
+/* ==========================================================================
+   LIGHT MODE OVERRIDES
+   ========================================================================== */
+
+body.light-mode,
+.stApp.light-mode {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 40%, #e2e8f0 100%) !important;
+}
+
+.stApp.light-mode section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 250, 252, 0.98) 100%) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 0 30px rgba(139, 92, 246, 0.1) !important;
+}
+
+.stApp.light-mode p,
+.stApp.light-mode label,
+.stApp.light-mode .stMarkdown {
+    color: #0f172a !important;
+}
+
+.stApp.light-mode h1,
+.stApp.light-mode h2,
+.stApp.light-mode h3 {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%) !important;
+    color: #0f172a !important;
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stApp.light-mode .sidebar-brand-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(59, 130, 246, 0.08) 100%) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.stApp.light-mode .brand-name {
+    color: #0f172a !important;
+}
+
+.stApp.light-mode .nav-item {
+    color: #334155 !important;
+}
+
+.stApp.light-mode .search-section-container {
+    background: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+.stApp.light-mode .ai-explanation-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.95) 100%) !important;
+    border: 1px solid rgba(139, 92, 246, 0.25) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08) !important;
+}
+
+.stApp.light-mode .ai-explanation-because {
+    color: #1e293b !important;
+}
+
+.stApp.light-mode .profile-card {
+    background: linear-gradient(135deg, rgba(241, 245, 249, 0.9) 0%, rgba(226, 232, 240, 0.9) 100%) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.stApp.light-mode .user-name {
+    color: #0f172a !important;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE STYLES — 768px & 480px breakpoints
+   ========================================================================== */
+
+/* ── Global Mobile Fluid Layout ── */
+@media (max-width: 768px) {
+
+    /* Full-width layout, prevent horizontal scroll */
+    .stApp {
+        overflow-x: hidden !important;
+    }
+
+    /* Header / H1 shrinks on mobile */
+    h1, h2, h3 {
+        font-size: 1.45rem !important;
+        padding: 10px 18px !important;
+        border-radius: 28px !important;
+        margin: 8px auto 18px auto !important;
+        width: 95% !important;
+        letter-spacing: 0.3px;
+    }
+
+    /* Body text readable on small screens */
+    p, label, .stMarkdown {
+        font-size: 0.92rem !important;
+    }
+
+    /* Sidebar collapse: Streamlit sidebar becomes a drawer on mobile — 
+       ensure it's full-width when open */
+    section[data-testid="stSidebar"] {
+        width: 100% !important;
+        min-width: unset !important;
+        max-width: 100vw !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.55) !important;
+    }
+
+    section[data-testid="stSidebar"] > div {
+        padding: 12px 14px !important;
+    }
+
+    /* Sidebar brand card compact */
+    .sidebar-brand-card {
+        padding: 10px 12px !important;
+        border-radius: 14px !important;
+    }
+
+    .brand-name {
+        font-size: 1.05rem !important;
+    }
+
+    /* Sidebar nav buttons: large thumb-friendly tap targets */
+    section[data-testid="stSidebar"] .stButton > button {
+        min-height: 48px !important;
+        font-size: 0.95rem !important;
+        border-radius: 14px !important;
+        margin-bottom: 4px !important;
+    }
+
+    /* Main content full width */
+    .block-container {
+        padding: 12px 10px !important;
+        max-width: 100% !important;
+    }
+
+    /* Search section: full-width on mobile */
+    .search-section-container {
+        padding: 14px 12px !important;
+        border-radius: 16px !important;
+        margin-bottom: 14px !important;
+    }
+
+    /* Search input: large touch-friendly */
+    .stTextInput > div > input {
+        font-size: 1rem !important;
+        min-height: 48px !important;
+        border-radius: 14px !important;
+        padding: 12px 16px !important;
+    }
+
+    /* Selectbox: touch-friendly */
+    .stSelectbox > div > div {
+        min-height: 48px !important;
+        font-size: 0.95rem !important;
+        border-radius: 14px !important;
+    }
+
+    /* Primary button full width + large */
+    .stButton > button {
+        min-height: 44px !important;
+        font-size: 0.9rem !important;
+        border-radius: 14px !important;
+        touch-action: manipulation !important;
+    }
+
+    /* Movie grid: 2 cards per row on mobile instead of 5 */
+    .stColumns {
+        flex-wrap: wrap !important;
+    }
+
+    [data-testid="column"] {
+        min-width: 47% !important;
+        max-width: 50% !important;
+        flex: 0 0 47% !important;
+    }
+
+    /* AI explanation card: compact on mobile */
+    .ai-explanation-card {
+        padding: 9px 11px !important;
+        border-radius: 12px !important;
+        margin-top: 8px !important;
+    }
+
+    .ai-explanation-header {
+        font-size: 0.65rem !important;
+    }
+
+    .ai-explanation-because {
+        font-size: 0.75rem !important;
+    }
+
+    .ai-score-label {
+        font-size: 0.7rem !important;
+    }
+
+    .ai-score-val {
+        font-size: 0.82rem !important;
+    }
+
+    .ai-genre-badge {
+        font-size: 0.66rem !important;
+        padding: 2px 7px !important;
+    }
+
+    /* Profile card compact */
+    .profile-card {
+        padding: 10px 12px !important;
+        border-radius: 14px !important;
+    }
+
+    .avatar-img-box {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Login page hero compact */
+    .login-brand-title {
+        font-size: 1.8rem !important;
+    }
+
+    .login-brand-logo {
+        font-size: 2.8rem !important;
+    }
+
+    .login-card-wrapper {
+        padding: 20px 16px !important;
+        border-radius: 20px !important;
+        margin: 0 8px !important;
+    }
+
+    .login-features-row {
+        gap: 7px !important;
+    }
+
+    .login-feature-tag {
+        font-size: 0.72rem !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Theme toggle button: right aligned compact */
+    .top-right-theme {
+        margin-top: 6px !important;
+    }
+}
+
+/* ── Extra small phones (480px) ── */
+@media (max-width: 480px) {
+
+    h1, h2, h3 {
+        font-size: 1.15rem !important;
+        padding: 8px 14px !important;
+        border-radius: 20px !important;
+    }
+
+    /* Single column on very small screens */
+    [data-testid="column"] {
+        min-width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .ai-explanation-card {
+        padding: 8px 10px !important;
+    }
+
+    /* Larger tap targets for buttons */
+    .stButton > button {
+        min-height: 50px !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Login card full-width on small phones */
+    .login-card-wrapper {
+        padding: 16px 12px !important;
+        border-radius: 16px !important;
+        margin: 0 4px !important;
+    }
+
+    .login-brand-title {
+        font-size: 1.5rem !important;
+    }
+
+    .login-brand-logo {
+        font-size: 2.2rem !important;
+    }
+
+    .sidebar-brand-card {
+        border-radius: 12px !important;
+    }
+
+    .brand-name {
+        font-size: 0.95rem !important;
+    }
+
+    /* Search label smaller */
+    .search-label {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ── Touch device specific tweaks ── */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase all clickable areas for fingers */
+    .stButton > button {
+        min-height: 48px !important;
+        padding: 12px 20px !important;
+    }
+
+    /* Remove hover animations that don't apply on touch */
+    .ai-explanation-card:hover,
+    .pref-slider-card:hover {
+        transform: none !important;
+    }
+
+    /* Disable desktop-only transitions */
+    section[data-testid="stSidebar"] div[role="slider"]:hover {
+        transform: scale(1.1) !important;
+    }
+}

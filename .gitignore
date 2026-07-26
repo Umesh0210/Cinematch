@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# IDE
+.idea/
+.ipynb_checkpoints/
+
+# Secrets
+.env
+
+# Large model
+model/similarity.pkl
+
+# Optional datasets
+*.zip
